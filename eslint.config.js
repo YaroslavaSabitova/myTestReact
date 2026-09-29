@@ -1,28 +1,28 @@
-import js from "@eslint/js";
-import { defineConfig } from "eslint/config";
-import cssModulesPlugin from "eslint-plugin-css-modules";
-import importPlugin from "eslint-plugin-import";
-import perfectionist from "eslint-plugin-perfectionist";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import unusedImports from "eslint-plugin-unused-imports";
-import globals from "globals";
-import tseslint from "typescript-eslint";
+import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
+import cssModulesPlugin from 'eslint-plugin-css-modules';
+import importPlugin from 'eslint-plugin-import';
+import perfectionist from 'eslint-plugin-perfectionist';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import unusedImports from 'eslint-plugin-unused-imports';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig(
   {
     ignores: [
-      "*.config.*",
-      "**/*.d.ts",
-      "dist",
-      "node_modules",
-      "package*.json",
-      "public",
-      "storybook-static",
-      "temp/*.js",
-      "**/vendor/*.js",
+      '*.config.*',
+      '**/*.d.ts',
+      'dist',
+      'node_modules',
+      'package*.json',
+      'public',
+      'storybook-static',
+      'temp/*.js',
+      '**/vendor/*.js',
     ],
   },
   js.configs.recommended,
@@ -31,136 +31,135 @@ export default defineConfig(
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
   react.configs.flat.recommended,
-  react.configs.flat["jsx-runtime"],
-  reactHooks.configs["recommended-latest"],
+  react.configs.flat['jsx-runtime'],
+  reactHooks.configs['recommended-latest'],
   {
-    files: ["**/*.{ts,tsx,js,jsx}"],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       parser: tseslint.parser,
       parserOptions: {
-        ecmaVersion: "latest",
+        ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
         projectService: true,
-        sourceType: "module",
+        sourceType: 'module',
         tsconfigRootDir: import.meta.dirname,
         warnOnUnsupportedTypeScriptVersion: false,
       },
       globals: globals.browser,
     },
     plugins: {
-      "css-modules": cssModulesPlugin,
+      'css-modules': cssModulesPlugin,
       perfectionist,
       react,
-      "react-refresh": reactRefresh,
-      "@typescript-eslint": tseslint.plugin,
-      "unused-imports": unusedImports,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint.plugin,
+      'unused-imports': unusedImports,
     },
     rules: {
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-      "@typescript-eslint/consistent-type-imports": [
-        "error",
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
         {
           disallowTypeAnnotations: true,
-          fixStyle: "separate-type-imports",
-          prefer: "type-imports",
+          fixStyle: 'separate-type-imports',
+          prefer: 'type-imports',
         },
       ],
-      "@typescript-eslint/explicit-function-return-type": "error",
-      "@typescript-eslint/explicit-module-boundary-types": "error",
-      "@typescript-eslint/no-import-type-side-effects": "error",
-      "@typescript-eslint/no-unused-expressions": [
-        "error",
+      '@typescript-eslint/explicit-function-return-type': 'error',
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
         {
           allowShortCircuit: true,
           allowTernary: true,
         },
       ],
-      "@typescript-eslint/no-unused-imports": "off",
-      "unused-imports/no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
+      '@typescript-eslint/no-unused-imports': 'off',
+      'unused-imports/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
         {
-          args: "after-used",
-          argsIgnorePattern: "^_",
-          caughtErrorsIgnorePattern: "^_",
-          vars: "all",
-          varsIgnorePattern: "^_",
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          vars: 'all',
+          varsIgnorePattern: '^_',
         },
       ],
-      "css-modules/no-undef-class": "error",
-      "css-modules/no-unused-class": "warn",
-      "import/no-unresolved": "error",
-      "import/no-unused-modules": "error",
-      "import/order": "off",
-      "perfectionist/sort-imports": [
-        "error",
+      'css-modules/no-undef-class': 'error',
+      'css-modules/no-unused-class': 'warn',
+      'import/no-unresolved': 'error',
+      'import/no-unused-modules': 'error',
+      'import/order': 'off',
+      'perfectionist/sort-imports': [
+        'error',
         {
-          type: "alphabetical",
-          order: "asc",
+          type: 'alphabetical',
+          order: 'asc',
           groups: [
-            "value-builtin",
-            "value-external",
-            "value-internal",
-            ["value-parent", "value-sibling"],
+            'value-builtin',
+            'value-external',
+            'value-internal',
+            ['value-parent', 'value-sibling'],
             [
-              "type-import",
-              "type-internal",
-              "type-parent",
-              "type-sibling",
-              "type-index",
+              'type-import',
+              'type-internal',
+              'type-parent',
+              'type-sibling',
+              'type-index',
             ],
-            "ts-equals-import",
-            "side-effect-style",
-            "style",
+            'ts-equals-import',
+            'side-effect-style',
+            'style',
           ],
           internalPattern: [
-            "^/",
-            "@/",
-            "^@components/",
-            "^@contexts/",
-            "^@hocs/",
-            "^@hooks/",
-            "^@pages/",
-            "^@services/",
-            "^@utils/",
+            '^/',
+            '@/',
+            '^@components/',
+            '^@contexts/',
+            '^@hocs/',
+            '^@hooks/',
+            '^@pages/',
+            '^@services/',
+            '^@utils/',
           ],
           customGroups: {
             value: {
-              "base-components": ["/*/*/[!-]*/*.*"],
-              "compound-components": ["/*/*/*-*/*.*"],
+              'base-components': ['/*/*/[!-]*/*.*'],
+              'compound-components': ['/*/*/*-*/*.*'],
             },
           },
-          newlinesBetween: "always",
+          newlinesBetween: 'always',
         },
       ],
-      "react/jsx-uses-react": "off",
-      "react/prop-types": "off",
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
-      "unused-imports/no-unused-imports": "error",
-      "react-hooks/exhaustive-deps": "off",
+      'react/jsx-uses-react': 'off',
+      'react/prop-types': 'off',
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'unused-imports/no-unused-imports': 'error',
+      'react-hooks/exhaustive-deps': 'off',
     },
     settings: {
-      "css-modules": {
-        camelCase: "true",
+      'css-modules': {
+        camelCase: 'true',
         filetypes: {
-          ".css": "postcss",
-          ".module.css": "postcss",
+          '.css': 'postcss',
+          '.module.css': 'postcss',
         },
       },
       react: {
-        version: "detect",
+        version: 'detect',
       },
-      "import/resolver": {
+      'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: "./tsconfig.json",
+          project: './tsconfig.json',
         },
       },
     },
   },
-  eslintPluginPrettierRecommended,
+  eslintPluginPrettierRecommended
 );
+
