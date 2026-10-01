@@ -1,4 +1,4 @@
-import type { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 // типизируем props компонента
 type RecipeProps = {
