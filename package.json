@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fix": "npx eslint src/ --no-cache",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "eslint": "eslint src/ --fix",

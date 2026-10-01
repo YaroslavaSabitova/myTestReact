@@ -59,17 +59,10 @@ export default defineConfig(
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-      '@typescript-eslint/consistent-type-imports': [
-        'error',
-        {
-          disallowTypeAnnotations: true,
-          fixStyle: 'separate-type-imports',
-          prefer: 'type-imports',
-        },
-      ],
+      '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/explicit-module-boundary-types': 'error',
-      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-import-type-side-effects': 'off',
       '@typescript-eslint/no-unused-expressions': [
         'error',
         {
