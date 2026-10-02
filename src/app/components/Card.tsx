@@ -1,16 +1,17 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 
 type CardProps = {
-  title: ReactElement;
-  body: ReactElement;
+  title: ReactNode;
+  body: ReactNode;
+  action?: ReactNode;
 };
 
-export function Card({ title, body }: CardProps): ReactElement {
+export function Card({ title, body, action }: CardProps): ReactElement {
   return (
     <div className='card'>
       {title}
       {body}
-      <button type='button'>В корзину</button>
+      {action}
     </div>
   );
 }

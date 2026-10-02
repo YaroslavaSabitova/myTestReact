@@ -12,7 +12,24 @@ export const App = (): ReactElement => {
     <>
       <Recipe name='Сырные палочки' />
       <Welcome userName='Мир,' welcomeText='привет' />
-      <Card title={title} body={body} />
+      <Card
+        title={title}
+        body={body}
+        action={
+          <button type='button' className='button'>
+            В корзину
+          </button>
+        }
+      />
+      <Card
+        title={title}
+        body={body}
+        action={
+          <a href='' target='_blank' className='link'>
+            Ссылка куда-то
+          </a>
+        }
+      />
     </>
   );
 };
