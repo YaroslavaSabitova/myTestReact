@@ -3,6 +3,7 @@ import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Title } from './components/MouseEnter';
 import Recipe from './components/Recipe';
+import { ThemeToggle } from './components/useState';
 import Welcome from './components/Welcome';
 
 import type { ReactElement } from 'react';
@@ -41,6 +42,8 @@ export const App = (): ReactElement => {
       <List list={listTextbooks} />
 
       <Title title='Наведи на меня курсор' />
+
+      <ThemeToggle />
     </>
   );
 };
