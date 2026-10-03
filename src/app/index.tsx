@@ -1,3 +1,4 @@
+import { Book, books, BookProps } from './components/Books';
 import { Card, CardTitle, CardBody } from './components/Card';
 import Recipe from './components/Recipe';
 import Welcome from './components/Welcome';
@@ -30,6 +31,10 @@ export const App = (): ReactElement => {
           </a>
         }
       />
+
+      {books.map((book: BookProps) => (
+        <Book key={book.article} title={book.title} description={book.description} />
+      ))}
     </>
   );
 };

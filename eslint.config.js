@@ -130,7 +130,7 @@ export default defineConfig(
       ],
       'react/jsx-uses-react': 'off',
       'react/prop-types': 'off',
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react-refresh/only-export-components': 'off',
       'unused-imports/no-unused-imports': 'error',
       'react-hooks/exhaustive-deps': 'off',
     },
