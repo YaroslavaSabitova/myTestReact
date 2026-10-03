@@ -1,6 +1,7 @@
 import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
+import { Title } from './components/MouseEnter';
 import Recipe from './components/Recipe';
 import Welcome from './components/Welcome';
 
@@ -38,6 +39,8 @@ export const App = (): ReactElement => {
       ))}
 
       <List list={listTextbooks} />
+
+      <Title title='Наведи на меня курсор' />
     </>
   );
 };

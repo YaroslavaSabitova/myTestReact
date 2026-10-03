@@ -14,6 +14,7 @@ export function Book(props: BookProps): ReactElement {
     </>
   );
 }
+
 export const books = [
   {
     article: 1,
