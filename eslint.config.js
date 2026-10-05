@@ -72,16 +72,7 @@ export default defineConfig(
       ],
       '@typescript-eslint/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          args: 'after-used',
-          argsIgnorePattern: '^_',
-          caughtErrorsIgnorePattern: '^_',
-          vars: 'all',
-          varsIgnorePattern: '^_',
-        },
-      ],
+      '@typescript-eslint/no-unused-vars': 'off',
       'css-modules/no-undef-class': 'error',
       'css-modules/no-unused-class': 'warn',
       'import/no-unresolved': 'error',

@@ -10,17 +10,29 @@ export function BtnCounter(): ReactElement {
   const [count, setCount] = useState(0);
   // const [count, setCount] = useState<number>(0);
 
-  // Обработчик клика на кнопку
-  const handleClick = () => {
-    // Вызов функции для изменения счётчика
+  const increment = (): void => {
     setCount(count + 1);
+  };
+
+  const decrement = (): void => {
+    setCount(count - 1);
+  };
+
+  const reset = (): void => {
+    setCount(0);
   };
 
   return (
     <div className='page'>
       <div className='card'>
-        <button className='button' type='button' onClick={handleClick}>
+        <button className='button' type='button' onClick={increment}>
           Счётчик {count}
+        </button>
+        <button type='button' className='button' onClick={decrement}>
+          −1
+        </button>
+        <button type='button' className='button' onClick={reset}>
+          Сбросить
         </button>
       </div>
     </div>
