@@ -6,27 +6,33 @@
 
 // useRef — точечный инструмент для двух задач: ссылки на DOM и хранения «служебных» значений между рендерами.
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
-//  автофокус - фокус ввода на поле ввода при отображении компонента
-
-export const TextInput = () => {
+export const ChangeColor = () => {
   // <HTMLInputElement | null> — тип: либо HTMLInputElement (когда элемент уже отрисован), либо null (до первого рендера).
   // null — начальное значение. DOM-узла ещё нет, потому что рендер ещё не произошёл.
   // useRef(null) создаёт объект { current: null }.
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const titleRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    // вызываем метод focus() у DOM-элемента
-    inputRef.current?.focus();
-  }, []);
+  const handleChangeColor = (): void => {
+    if (titleRef.current) {
+      titleRef.current.style.color = 'gold';
+    }
+  };
 
   return (
-    <div>
-      <label htmlFor='name'>Name</label>
-
-      {/* когда <input> появится в DOM, ссылка на него будет в inputRef.current */}
-      <input id='name' ref={inputRef} />
+    <div className='page'>
+      {/* ref привязан к заголовку */}
+      {/* React рендерит <h1 ref={titleRef}>. */}
+      {/* После рендера React записывает DOM-элемент <h1> в titleRef.current. */}
+      <h1 className='header' ref={titleRef}>
+        Я меняю свой цвет
+      </h1>
+      <div className='card'>
+        <button type='button' onClick={handleChangeColor}>
+          Изменить цвет
+        </button>
+      </div>
     </div>
   );
 };

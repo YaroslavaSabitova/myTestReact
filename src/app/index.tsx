@@ -5,6 +5,7 @@ import { Title } from './components/MouseEnter';
 import Recipe from './components/Recipe';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
+import { ChangeColor } from './components/useRef-changeColor';
 import { BtnCounter } from './components/useState-counter';
 import { ThemeToggle } from './components/useState-theme';
 import Welcome from './components/Welcome';
@@ -53,6 +54,8 @@ export const App = (): ReactElement => {
       <Time />
 
       <TextInput />
+
+      <ChangeColor />
     </>
   );
 };
