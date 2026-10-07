@@ -6,6 +6,7 @@ import { InputFile } from './components/inputFile';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
 import Recipe from './components/Recipe';
+import { Select } from './components/select';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
@@ -71,6 +72,8 @@ export const App = (): ReactElement => {
       <UncontrolledInput />
 
       <InputFile />
+
+      <Select />
     </>
   );
 };
