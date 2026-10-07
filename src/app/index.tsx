@@ -1,10 +1,11 @@
 import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
+import { ControlledInput } from './components/controlledInput';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
 import Recipe from './components/Recipe';
-import { NewMessage } from './components/textarea';
+import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
 import { ChangeColorRef } from './components/useRef-changeColor';
@@ -62,9 +63,11 @@ export const App = (): ReactElement => {
 
       <ChangeColorState />
 
-      <NewMessage />
+      <ControlledInput />
 
       <OnlyDigits />
+
+      <UncontrolledInput />
     </>
   );
 };

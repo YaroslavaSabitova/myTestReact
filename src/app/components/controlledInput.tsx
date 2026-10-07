@@ -1,9 +1,11 @@
 // контролируемые поля / управляемые компоненты
+// React управляет полями ввода, а не просто «подписывается» на них
+// React хранит значение в состоянии и всегда знает, что в поле.
 
 import { useState, ChangeEvent } from 'react';
 // ChangeEvent — тип события изменения поля
 
-export function NewMessage() {
+export function ControlledInput() {
   // нач значение value = ''
   // setValue - ф-ция, к-ая меняет value
   const [value, setValue] = useState('');
