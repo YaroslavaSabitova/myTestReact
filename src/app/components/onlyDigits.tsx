@@ -3,18 +3,14 @@
 import { useState, ChangeEvent } from 'react';
 // ChangeEvent — тип события изменения поля
 
-export function NewMessage() {
+export function OnlyDigits() {
   // нач значение value = ''
   // setValue - ф-ция, к-ая меняет value
   const [value, setValue] = useState('');
 
-  function changeInput(e: ChangeEvent<HTMLInputElement>) {
-    setValue(e.target.value);
-  }
-
-  // Обработчик изменения поля ввода обновляет состояние
-  function changeArea(e: ChangeEvent<HTMLTextAreaElement>) {
-    setValue(e.target.value);
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    const onlyDigits = e.target.value.replace(/\D/g, '');
+    setValue(onlyDigits);
   }
 
   function resetValue() {
@@ -23,12 +19,11 @@ export function NewMessage() {
 
   return (
     <>
-      <h1>пишем текст</h1>
+      <h1>а здесь only digits</h1>
 
       {/* Значение элемента «привязывается» к значению состояния */}
-      <input type='text' value={value} onChange={changeInput} />
+      <input type='text' value={value} onChange={handleChange} />
 
-      <textarea value={value} onChange={changeArea} />
       <button type='button' onClick={resetValue}>
         Очистить
       </button>

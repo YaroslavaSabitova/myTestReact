@@ -2,6 +2,7 @@ import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Title } from './components/MouseEnter';
+import { OnlyDigits } from './components/onlyDigits';
 import Recipe from './components/Recipe';
 import { NewMessage } from './components/textarea';
 import { Time } from './components/useEffect-onlineTime';
@@ -62,6 +63,8 @@ export const App = (): ReactElement => {
       <ChangeColorState />
 
       <NewMessage />
+
+      <OnlyDigits />
     </>
   );
 };
