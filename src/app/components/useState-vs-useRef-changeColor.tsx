@@ -4,29 +4,45 @@
 // Позволяет менять стиль в ответ на состояние (клик, ввод)
 // если значение должно влиять на разметку — это useState
 
-import { useState, ReactElement } from 'react';
+import { useState } from 'react';
 
-type Theme = 'светлая' | 'тёмная';
-
-export function ThemeToggle(): ReactElement {
+export const ChangeColorState = () => {
   // Начальное состояние компонента и функция для изменения состояния
   // [текущееЗначение, функцияЧтобыЕгоИзменить] = вызов хука с начальным значением
-  // theme = 'светлая';
-  const [theme, setTheme] = useState<Theme>('светлая');
+  // isGold = false
+  const [isGold, setIsGold] = useState(false);
 
-  // Обработчик клика на кнопку
-  const toggleTheme = () => {
-    // Вызов функции для изменения состояния
-    setTheme(theme === 'светлая' ? 'тёмная' : 'светлая');
+  const handleChangeColor = (): void => {
+    // isGold = true;
+    setIsGold(true);
   };
 
-  const themeClass = theme === 'светлая' ? 'th-light' : 'th-dark';
-  const buttonImage = theme === 'светлая' ? '🌞' : '🌚';
+  const resetChangeColor = (): void => {
+    // isGold = false
+    setIsGold(false);
+  };
+
+  // prev - текущее значение
+  const toggleColor = (): void => {
+    setIsGold((prev) => !prev);
+  };
 
   return (
-    <div className={themeClass}>
-      <p>Включена {theme} тема</p>
-      <button onClick={toggleTheme}>{buttonImage}</button>
+    <div className='page'>
+      <h1 className='header' style={{ color: isGold ? 'gold' : undefined }}>
+        Я меняю свой цвет через useState
+      </h1>
+      <div className='card'>
+        <button type='button' onClick={handleChangeColor}>
+          Изменить цвет2
+        </button>
+        <button type='button' onClick={resetChangeColor}>
+          Убрать цвет2
+        </button>
+        <button type='button' onClick={toggleColor}>
+          {isGold ? 'Убрать цвет' : 'Изменить цвет'}
+        </button>
+      </div>
     </div>
   );
-}
+};

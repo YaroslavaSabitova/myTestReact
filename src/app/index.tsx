@@ -5,9 +5,10 @@ import { Title } from './components/MouseEnter';
 import Recipe from './components/Recipe';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
-import { ChangeColor } from './components/useRef-changeColor';
+import { ChangeColorRef } from './components/useRef-changeColor';
 import { BtnCounter } from './components/useState-counter';
 import { ThemeToggle } from './components/useState-theme';
+import { ChangeColorState } from './components/useState-vs-useRef-changeColor';
 import Welcome from './components/Welcome';
 
 import type { ReactElement } from 'react';
@@ -55,7 +56,9 @@ export const App = (): ReactElement => {
 
       <TextInput />
 
-      <ChangeColor />
+      <ChangeColorRef />
+
+      <ChangeColorState />
     </>
   );
 };
