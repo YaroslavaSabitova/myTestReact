@@ -2,6 +2,7 @@ import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { ControlledInput } from './components/controlledInput';
+import { InputFile } from './components/inputFile';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
 import Recipe from './components/Recipe';
@@ -68,6 +69,8 @@ export const App = (): ReactElement => {
       <OnlyDigits />
 
       <UncontrolledInput />
+
+      <InputFile />
     </>
   );
 };
