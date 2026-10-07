@@ -5,6 +5,7 @@ import { ControlledInput } from './components/controlledInput';
 import { InputFile } from './components/inputFile';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
+import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
 import { Select } from './components/select';
 import { UncontrolledInput } from './components/uncontrolledInput';
@@ -74,6 +75,8 @@ export const App = (): ReactElement => {
       <InputFile />
 
       <Select />
+
+      <Radio />
     </>
   );
 };
