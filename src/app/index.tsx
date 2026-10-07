@@ -1,4 +1,4 @@
-import { Book, books, BookProps } from './components/Books';
+import { Book, books } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
@@ -9,6 +9,7 @@ import { OnlyDigits } from './components/onlyDigits';
 import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
 import { Select } from './components/select';
+import { Subscribe } from './components/Subscribe';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
@@ -18,6 +19,7 @@ import { ThemeToggle } from './components/useState-theme';
 import { ChangeColorState } from './components/useState-vs-useRef-changeColor';
 import Welcome from './components/Welcome';
 
+import type { BookProps } from './components/Books';
 import type { ReactElement } from 'react';
 
 const title = <CardTitle />;
@@ -80,6 +82,8 @@ export const App = (): ReactElement => {
       <Radio />
 
       <Checkbox />
+
+      <Subscribe />
     </>
   );
 };

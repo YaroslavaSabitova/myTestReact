@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
+import type { ChangeEvent } from 'react';
+
 export const Checkbox = () => {
   const [checked, setChecked] = useState(true);
 
-  const onChange = (e) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     // Тут у event.target используем свойство checked
     setChecked(e.target.checked);
   };

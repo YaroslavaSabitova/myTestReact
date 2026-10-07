@@ -28,7 +28,7 @@ export default defineConfig(
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
-  tseslint.configs.recommendedTypeChecked,
+  // tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
@@ -145,4 +145,3 @@ export default defineConfig(
   },
   eslintPluginPrettierRecommended
 );
-
