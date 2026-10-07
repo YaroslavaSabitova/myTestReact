@@ -21,7 +21,7 @@ export function OnlyDigits() {
 
   return (
     <>
-      <h1>а здесь only digits</h1>
+      <h2>а здесь only digits</h2>
 
       {/* Значение элемента «привязывается» к значению состояния */}
       <input type='text' value={value} onChange={handleChange} />

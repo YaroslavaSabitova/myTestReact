@@ -25,7 +25,7 @@ export function ControlledInput() {
 
   return (
     <>
-      <h1>пишем текст</h1>
+      <h3>пишем текст</h3>
 
       {/* Значение элемента «привязывается» к значению состояния */}
       <input type='text' value={value} onChange={changeInput} />

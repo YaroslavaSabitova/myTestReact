@@ -1,6 +1,7 @@
 import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
+import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
 import { InputFile } from './components/inputFile';
 import { Title } from './components/MouseEnter';
@@ -77,6 +78,8 @@ export const App = (): ReactElement => {
       <Select />
 
       <Radio />
+
+      <Checkbox />
     </>
   );
 };

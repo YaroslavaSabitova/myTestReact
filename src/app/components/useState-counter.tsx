@@ -27,6 +27,7 @@ export function BtnCounter(): ReactElement {
 
   return (
     <div className='page'>
+      <h3>counter</h3>
       <div className='card'>
         <button className='button' type='button' onClick={increment}>
           Счётчик {count}

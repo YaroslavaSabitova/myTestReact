@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 // Загрузка файлов на сервер
 
 // В React <input type="file"> всегда неуправляемый компонент: его значение нельзя установить средствами JS, это может сделать только пользователь.
@@ -22,7 +21,7 @@ export function InputFile() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Отправка файла</h1>
+      <h3>Отправка файла</h3>
       <label>
         Выберите файл:
         <input type='file' ref={fileInput} />

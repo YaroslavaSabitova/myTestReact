@@ -27,6 +27,7 @@ export const TextInput = () => {
 
   return (
     <div>
+      <h3>autofocus</h3>
       <label htmlFor='name'>Name</label>
 
       {/* когда <input> появится в DOM, ссылка на него будет в inputRef.current */}

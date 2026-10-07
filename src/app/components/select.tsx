@@ -11,14 +11,17 @@ export const Select = () => {
   };
 
   return (
-    <label>
-      Ваша роль в проекте:
-      <select value={role} onChange={handleChange}>
-        <option value='designer'>Дизайнер</option>
-        <option value='developer'>Разработчик</option>
-        <option value='teamlead'>Тимлид</option>
-        <option value='project-manager'>Руководитель проекта</option>
-      </select>
-    </label>
+    <>
+      <h3>select</h3>
+      <label>
+        Ваша роль в проекте:
+        <select value={role} onChange={handleChange}>
+          <option value='designer'>Дизайнер</option>
+          <option value='developer'>Разработчик</option>
+          <option value='teamlead'>Тимлид</option>
+          <option value='project-manager'>Руководитель проекта</option>
+        </select>
+      </label>
+    </>
   );
 };
