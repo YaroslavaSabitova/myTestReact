@@ -3,6 +3,7 @@ import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Title } from './components/MouseEnter';
 import Recipe from './components/Recipe';
+import { NewMessage } from './components/textarea';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
 import { ChangeColorRef } from './components/useRef-changeColor';
@@ -59,6 +60,8 @@ export const App = (): ReactElement => {
       <ChangeColorRef />
 
       <ChangeColorState />
+
+      <NewMessage />
     </>
   );
 };
