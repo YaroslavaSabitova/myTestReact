@@ -5,7 +5,7 @@ import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
-import { Form } from './components/Form';
+import { Form } from './components/form';
 import { InputFile } from './components/inputFile';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
@@ -13,6 +13,7 @@ import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
 import { Select } from './components/select';
 import { Subscribe } from './components/Subscribe';
+import { TemperatureConverter } from './components/TemperatureConverter';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
@@ -86,6 +87,8 @@ export const App = (): ReactElement => {
       <Subscribe />
 
       <Form />
+
+      <TemperatureConverter />
     </>
   );
 };
