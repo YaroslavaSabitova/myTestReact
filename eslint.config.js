@@ -1,3 +1,5 @@
+// Файл eslint.config.js
+
 import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import cssModulesPlugin from 'eslint-plugin-css-modules';
@@ -21,14 +23,12 @@ export default defineConfig(
       'package*.json',
       'public',
       'storybook-static',
-      'temp/*.js',
-      '**/vendor/*.js',
     ],
   },
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
-  // tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
@@ -62,20 +62,34 @@ export default defineConfig(
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/consistent-type-definitions': 'off',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-import-type-side-effects': 'off',
-      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true,
+          allowTernary: true,
+        },
+      ],
       '@typescript-eslint/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'css-modules/no-undef-class': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          vars: 'all',
+          varsIgnorePattern: '^_',
+        },
+      ],
+      'css-modules/no-undef-class': 'error',
       'css-modules/no-unused-class': 'warn',
       'import/no-unresolved': 'error',
-      'import/no-unused-modules': 'off',
+      'import/no-unused-modules': 'error',
       'import/order': 'off',
       'perfectionist/sort-imports': [
         'error',
@@ -120,8 +134,8 @@ export default defineConfig(
       ],
       'react/jsx-uses-react': 'off',
       'react/prop-types': 'off',
-      'react-refresh/only-export-components': 'off',
-      'unused-imports/no-unused-imports': 'off',
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'unused-imports/no-unused-imports': 'error',
       'react-hooks/exhaustive-deps': 'off',
     },
     settings: {

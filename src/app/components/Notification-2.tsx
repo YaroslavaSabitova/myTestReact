@@ -1,6 +1,4 @@
-import { ReactElement } from 'react';
-
-import type { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 type NotificationProps = {
   // Внутрь можно положить что угодно — строку, число, JSX, массив, другой компонент

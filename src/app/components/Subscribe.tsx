@@ -1,8 +1,6 @@
 // Обработка нескольких полей одним обработчиком
 
-import { useState } from 'react';
-
-import type { ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 
 export const Subscribe = () => {
   const [state, setState] = useState({

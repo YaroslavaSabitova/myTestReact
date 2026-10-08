@@ -1,8 +1,11 @@
-import { Book, books } from './components/Books';
+import { ReactElement } from 'react';
+
+import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
+import { Form } from './components/Form';
 import { InputFile } from './components/inputFile';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
@@ -18,9 +21,6 @@ import { BtnCounter } from './components/useState-counter';
 import { ThemeToggle } from './components/useState-theme';
 import { ChangeColorState } from './components/useState-vs-useRef-changeColor';
 import Welcome from './components/Welcome';
-
-import type { BookProps } from './components/Books';
-import type { ReactElement } from 'react';
 
 const title = <CardTitle />;
 const body = <CardBody />;
@@ -84,6 +84,8 @@ export const App = (): ReactElement => {
       <Checkbox />
 
       <Subscribe />
+
+      <Form />
     </>
   );
 };
