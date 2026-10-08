@@ -13,18 +13,25 @@ type TTemperature = {
   temperature: string;
 };
 
-// convert (это toCelsius или toFahrenheit)
+// convert - это toCelsius или toFahrenheit
 // классический паттерн для двусторонних форм: цена с НДС / без НДС, мили / километры, доллары / рубли. Везде, где два поля связаны формулой.
 function tryConvert(temperature: string, convert: (_: number) => number) {
+  // (_: number) — функция принимает один обязательный аргумент типа number
+
   // строку в число
   const input = parseFloat(temperature);
   if (Number.isNaN(input)) {
     return '';
   }
 
+  // convert - это toCelsius или toFahrenheit
+  // вызываем эту функцию с числом, которе ввели и отправляем в output
   const output = convert(input);
+
+  // округляем
   const rounded = Math.round(output * 1000) / 1000;
 
+  // приводим к строке для полей
   return rounded.toString();
 }
 
