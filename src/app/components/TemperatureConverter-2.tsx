@@ -13,6 +13,7 @@ type TTemperature = {
   temperature: string;
 };
 
+// --- Утилита конвертации ---
 // convert - это toCelsius или toFahrenheit
 // классический паттерн для двусторонних форм: цена с НДС / без НДС, мили / километры, доллары / рубли. Везде, где два поля связаны формулой.
 function tryConvert(temperature: string, convert: (_: number) => number) {
@@ -28,13 +29,14 @@ function tryConvert(temperature: string, convert: (_: number) => number) {
   // вызываем эту функцию с числом, которе ввели и отправляем в output
   const output = convert(input);
 
-  // округляем
+  // округляем до 3х знаков
   const rounded = Math.round(output * 1000) / 1000;
 
   // приводим к строке для полей
   return rounded.toString();
 }
 
+// --- Формулы ---
 function toCelsius(fahrenheit: number): number {
   return ((fahrenheit - 32) * 5) / 9;
 }
@@ -104,7 +106,7 @@ export const TemperatureConverter2 = () => {
 
   return (
     <div className='page'>
-      <h1>Конвертер температуры</h1>
+      <h2>Конвертер температуры 2</h2>
       <div className='content'>
         <TemperatureInput
           scale={TemperatureScale.CELCIUS}

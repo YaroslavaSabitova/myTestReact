@@ -40,7 +40,7 @@ export function TemperatureConverter() {
 
   return (
     <>
-      <h3>Конвертер температуры</h3>
+      <h2>Конвертер температуры</h2>
       {/* temperature={temperature} — текущее значение для отображения */}
       <CelsiusInput temperature={temperature} onTemperatureChange={setTemperature} />
 

@@ -22,6 +22,7 @@ import { ChangeColorRef } from './components/useRef-changeColor';
 import { BtnCounter } from './components/useState-counter';
 import { ThemeToggle } from './components/useState-theme';
 import { ChangeColorState } from './components/useState-vs-useRef-changeColor';
+import { VatNds } from './components/VAT-NDS';
 import Welcome from './components/Welcome';
 
 const title = <CardTitle />;
@@ -92,6 +93,8 @@ export const App = (): ReactElement => {
       <TemperatureConverter />
 
       <TemperatureConverter2 />
+
+      <VatNds />
     </>
   );
 };
