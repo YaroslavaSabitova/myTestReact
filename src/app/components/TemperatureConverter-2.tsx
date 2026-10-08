@@ -6,11 +6,17 @@ enum TemperatureScale {
 }
 
 type TTemperature = {
+  // в какой шкале введено значение
   scale: TemperatureScale;
+
+  // само введённое значение (строкой)
   temperature: string;
 };
 
+// convert (это toCelsius или toFahrenheit)
+// классический паттерн для двусторонних форм: цена с НДС / без НДС, мили / километры, доллары / рубли. Везде, где два поля связаны формулой.
 function tryConvert(temperature: string, convert: (_: number) => number) {
+  // строку в число
   const input = parseFloat(temperature);
   if (Number.isNaN(input)) {
     return '';
@@ -59,6 +65,7 @@ export const TemperatureInput = ({
 };
 
 export const TemperatureConverter2 = () => {
+  // из TTemperature
   const [{ scale, temperature }, setValue] = useState<TTemperature>({
     scale: TemperatureScale.CELCIUS,
     temperature: '',
@@ -72,10 +79,17 @@ export const TemperatureConverter2 = () => {
     setValue({ scale: TemperatureScale.FAHRENHEIT, temperature });
   };
 
+  //   Если scale === FAHRENHEIT, значит пользователь редактирует поле Фаренгейта.
+  // Значит, в temperature Фаренгейты, а не Цельсии.
+  // Значит, для поля Цельсия нужно сконвертировать: tryConvert(temperature, toCelsius).
   const celsius =
     scale === TemperatureScale.FAHRENHEIT
       ? tryConvert(temperature, toCelsius)
       : temperature;
+
+  //   Если scale !== FAHRENHEIT, то scale === CELCIUS. Пользователь редактирует поле Цельсия.
+  // Значит, temperature уже в Цельсиях.
+  // Отдаём как есть: temperature.
   const fahrenheit =
     scale === TemperatureScale.CELCIUS
       ? tryConvert(temperature, toFahrenheit)
