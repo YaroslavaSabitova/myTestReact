@@ -14,6 +14,7 @@ import Recipe from './components/Recipe';
 import { Select } from './components/select';
 import { Subscribe } from './components/Subscribe';
 import { TemperatureConverter } from './components/TemperatureConverter';
+import { TemperatureConverter2 } from './components/TemperatureConverter-2';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
@@ -89,6 +90,8 @@ export const App = (): ReactElement => {
       <Form />
 
       <TemperatureConverter />
+
+      <TemperatureConverter2 />
     </>
   );
 };
