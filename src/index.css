@@ -4,9 +4,9 @@
   font-family: system-ui, 'Avenir', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.5;
   background-color: #242424;
+  text-rendering: optimizelegibility;
   color-scheme: light dark;
   font-synthesis: none;
-  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,10 +23,10 @@ a:hover {
 
 body {
   display: flex;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  place-items: center;
 }
 
 h1 {
@@ -68,4 +68,35 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  border: 2px solid #51c98f;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background-color: #e6e6e6;
+}
+
+.modal-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em;
 }

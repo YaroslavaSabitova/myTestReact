@@ -7,6 +7,7 @@ import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
 import { Form } from './components/form';
 import { InputFile } from './components/inputFile';
+import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
 import { Radio } from './components/radio';
@@ -95,6 +96,8 @@ export const App = (): ReactElement => {
       <TemperatureConverter2 />
 
       <VatNds />
+
+      <BtnModalOpen />
     </>
   );
 };
