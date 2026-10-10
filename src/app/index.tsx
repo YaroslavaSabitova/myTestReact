@@ -5,6 +5,7 @@ import { List, listTextbooks } from './components/Books-2';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
+import { ToggleText } from './components/customHook/ToggleText';
 import { Form } from './components/form';
 import { InputFile } from './components/inputFile';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
@@ -98,6 +99,8 @@ export const App = (): ReactElement => {
       <VatNds />
 
       <BtnModalOpen />
+
+      <ToggleText />
     </>
   );
 };
