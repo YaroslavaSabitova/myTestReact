@@ -6,6 +6,7 @@ import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
 import { ToggleText } from './components/customHook/ToggleText';
+import { ErrorBoundaryApp } from './components/ErrorBoundary/ErrorBoundary';
 import { Form } from './components/form';
 import { FunctionalBtn } from './components/FunctionalBtn';
 import { InputFile } from './components/inputFile';
@@ -104,6 +105,8 @@ export const App = (): ReactElement => {
       <ToggleText />
 
       <FunctionalBtn />
+
+      <ErrorBoundaryApp />
     </>
   );
 };
