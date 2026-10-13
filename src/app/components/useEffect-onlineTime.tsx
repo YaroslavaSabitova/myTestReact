@@ -1,6 +1,8 @@
 // компонент, отображающий электронные часы.
 // эффект — не по клику, а по расписанию таймера.
 
+// useEffect срабатывает после отрисовки
+
 import { useEffect, useState, ReactElement } from 'react';
 
 export const Time = (): ReactElement => {

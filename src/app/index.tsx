@@ -7,6 +7,7 @@ import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
 import { ToggleText } from './components/customHook/ToggleText';
 import { Form } from './components/form';
+import { FunctionalBtn } from './components/FunctionalBtn';
 import { InputFile } from './components/inputFile';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { Title } from './components/MouseEnter';
@@ -101,6 +102,8 @@ export const App = (): ReactElement => {
       <BtnModalOpen />
 
       <ToggleText />
+
+      <FunctionalBtn />
     </>
   );
 };
