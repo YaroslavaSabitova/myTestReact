@@ -11,8 +11,12 @@ export const Time = (): ReactElement => {
   // [текущееЗначение, функцияЧтобыЕгоИзменить] = вызов хука с начальным значением
   const [time, setTime] = useState(new Date());
 
+  const [isRunning, setIsRunning] = useState(true);
+
   // useEffect с [] — запускает таймер один раз при появлении компонента.
   useEffect(() => {
+    if (!isRunning) return;
+
     const timerId = setInterval(() => {
       setTime(new Date());
       //  каждые 1000 мс кладёт новое new Date() в состояние
@@ -26,26 +30,29 @@ export const Time = (): ReactElement => {
 
     // [] (пустой массив), массив зависимостей — эффект выполнится один раз после первого рендера и больше никогда,
     //  т.е. таймер не будет пересоздан каждую секунду
-  }, []);
+  }, [isRunning]);
   // если без [], то эффект выполнится после каждого рендера (60 таймеров через минуту)
   // для таймеров, подписок и запросов «один раз при монтировании» — всегда [] пустой массив
 
-  // const format = (date: Date): string => {
-  //   const hh = String(date.getHours()).padStart(2, '0');
-  //   const mm = String(date.getMinutes()).padStart(2, '0');
-  //   const ss = String(date.getSeconds()).padStart(2, '0');
-  //   return `${hh}:${mm}:${ss}`;
-  // };
+  const handleStart = (): void => {
+    setIsRunning(true);
+  };
 
-  //   date.getHours() возвращает число, например 5 (не 05).
-  // String(5) → "5".
-  // .padStart(2, '0') → добавляет нули слева до длины 2 → "05".
-  // Собираем в строку "05:03:09".
+  const handleStop = (): void => {
+    setIsRunning(false);
+  };
 
   return (
     <div>
-      {/* <h1 className='clock'>{format(time)}</h1> */}
       <h1 className='clock'>{time.toLocaleTimeString('ru-RU')}</h1>
+      <div className='controls'>
+        <button type='button' onClick={handleStart} disabled={isRunning}>
+          Старт
+        </button>
+        <button type='button' onClick={handleStop} disabled={!isRunning}>
+          Стоп
+        </button>
+      </div>
     </div>
   );
 };
