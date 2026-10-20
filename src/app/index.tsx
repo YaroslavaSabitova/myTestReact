@@ -11,6 +11,7 @@ import { FocusBlur } from './components/focusBlur';
 import { Form } from './components/form';
 import { FunctionalBtn } from './components/FunctionalBtn';
 import { InputFile } from './components/inputFile';
+import { KeyboardEvent } from './components/KeyboardEvent';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
@@ -113,6 +114,8 @@ export const App = (): ReactElement => {
       <SynthEvent />
 
       <FocusBlur />
+
+      <KeyboardEvent />
     </>
   );
 };
