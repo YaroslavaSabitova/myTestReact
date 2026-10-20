@@ -17,6 +17,7 @@ import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
 import { Select } from './components/select';
 import { Subscribe } from './components/Subscribe';
+import { SynthEvent } from './components/syntheticEvent';
 import { TemperatureConverter } from './components/TemperatureConverter';
 import { TemperatureConverter2 } from './components/TemperatureConverter-2';
 import { UncontrolledInput } from './components/uncontrolledInput';
@@ -107,6 +108,8 @@ export const App = (): ReactElement => {
       <FunctionalBtn />
 
       <ErrorBoundaryApp />
+
+      <SynthEvent />
     </>
   );
 };
