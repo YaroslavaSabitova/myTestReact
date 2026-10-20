@@ -7,6 +7,7 @@ import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
 import { ToggleText } from './components/customHook/ToggleText';
 import { ErrorBoundaryApp } from './components/ErrorBoundary/ErrorBoundary';
+import { FocusBlur } from './components/focusBlur';
 import { Form } from './components/form';
 import { FunctionalBtn } from './components/FunctionalBtn';
 import { InputFile } from './components/inputFile';
@@ -110,6 +111,8 @@ export const App = (): ReactElement => {
       <ErrorBoundaryApp />
 
       <SynthEvent />
+
+      <FocusBlur />
     </>
   );
 };
