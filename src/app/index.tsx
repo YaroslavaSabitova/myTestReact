@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 
 import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
+import { BtnCaptureEvent } from './components/BtnCaptureEvent';
 import { CaptureEvent } from './components/CaptureEvent';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
@@ -122,6 +123,8 @@ export const App = (): ReactElement => {
       <FormEvents />
 
       <CaptureEvent />
+
+      <BtnCaptureEvent />
     </>
   );
 };
