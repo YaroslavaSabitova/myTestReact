@@ -11,7 +11,13 @@ export function CaptureEvent(): ReactElement {
     console.log('всплывающий клик на родителе');
   }
 
-  function targetClick() {
+  function targetClick(e: React.MouseEvent) {
+    // отмена всплытия
+    // убирает bubbleClick - всплывающий клик на родителе
+    e.stopPropagation();
+
+    console.log('e.target', e.target);
+    console.log('e.currentTarget', e.currentTarget);
     console.log('Клик на конопке');
   }
 
@@ -27,8 +33,15 @@ export function CaptureEvent(): ReactElement {
         внутри
       </h3>
       <div onClick={bubbleClick} onClickCapture={captureClick}>
-        <button onClick={targetClick}>Нажми на кнопку</button>
+        <div onClick={targetClick}>
+          <button>
+            <span>Нажми на кнопку</span>
+          </button>
+        </div>
       </div>
     </div>
   );
 }
+
+// e.target - где кликнули(button или span)
+// e.currentTarget - всегда тот, на ком обработчик, т.е div
