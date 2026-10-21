@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 
 import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
+import { CaptureEvent } from './components/CaptureEvent';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
 import { ControlledInput } from './components/controlledInput';
@@ -119,6 +120,8 @@ export const App = (): ReactElement => {
       <KeyboardEvent />
 
       <FormEvents />
+
+      <CaptureEvent />
     </>
   );
 };
