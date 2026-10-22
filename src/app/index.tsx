@@ -19,6 +19,7 @@ import { KeyboardEvent } from './components/KeyboardEvent';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
+import { Portal } from './components/Portal/Portal';
 import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
 import { Select } from './components/select';
@@ -131,6 +132,8 @@ export const App = (): ReactElement => {
       <ForwardRef />
 
       <Video />
+
+      <Portal />
     </>
   );
 };
