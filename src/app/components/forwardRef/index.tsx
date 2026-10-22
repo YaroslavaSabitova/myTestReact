@@ -22,6 +22,7 @@ export const ForwardRef = () => {
         ForwardRef - это специальная функция React, которая позволяет компоненту принять
         ref от родителя и передать его вниз, на конкретный DOM-элемент.
       </h3>
+      <h3>привязываем реф к HTML-тегу</h3>
       <h4>
         при обновлении страницы фокус автоматически ставится на поле ввода, то есть на
         элементе input;
@@ -32,3 +33,11 @@ export const ForwardRef = () => {
     </div>
   );
 };
+
+// Создание: ForwardRef создаёт inputRef и передаёт его в <Input ref={inputRef} />.
+
+// Проброс: Input (благодаря forwardRef) принимает inputRef и вешает на <input ref={inputRef} />.
+
+// Привязка: React отрисовывает <input> и кладёт реальный DOM-элемент в inputRef.current.
+
+// Использование: ForwardRef через inputRef.current может вызвать .focus() или .blur() когда угодно.
