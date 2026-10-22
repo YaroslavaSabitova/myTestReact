@@ -12,6 +12,7 @@ import { ErrorBoundaryApp } from './components/ErrorBoundary/ErrorBoundary';
 import { FocusBlur } from './components/focusBlur';
 import { Form } from './components/form';
 import { FormEvents } from './components/FormEvents';
+import { ForwardRef } from './components/forwardRef';
 import { FunctionalBtn } from './components/FunctionalBtn';
 import { InputFile } from './components/inputFile';
 import { KeyboardEvent } from './components/KeyboardEvent';
@@ -125,6 +126,8 @@ export const App = (): ReactElement => {
       <CaptureEvent />
 
       <BtnCaptureEvent />
+
+      <ForwardRef />
     </>
   );
 };
