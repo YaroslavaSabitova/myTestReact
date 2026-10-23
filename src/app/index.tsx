@@ -14,6 +14,7 @@ import { Form } from './components/form';
 import { FormEvents } from './components/FormEvents';
 import { ForwardRef } from './components/forwardRef';
 import { FunctionalBtn } from './components/FunctionalBtn';
+import { HOC } from './components/HigherOrderComponent/HOC';
 import { InputFile } from './components/inputFile';
 import { KeyboardEvent } from './components/KeyboardEvent';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
@@ -134,6 +135,8 @@ export const App = (): ReactElement => {
       <Video />
 
       <Portal />
+
+      <HOC />
     </>
   );
 };
