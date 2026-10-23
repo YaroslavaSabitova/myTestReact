@@ -1,26 +1,35 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
+import { CurrentPlayingTrackContext } from './CurrentPlayingTrackContext';
 import { TrackModel } from './models/Track';
 
 import './styles.css';
 
 interface PlayPauseProps {
   track: TrackModel;
-  currentPlayingTrack: TrackModel | null;
-  setCurrentPlayingTrack: (currentPlayingTrackId: TrackModel) => void;
 }
-export const PlayPause = ({
-  currentPlayingTrack,
-  setCurrentPlayingTrack,
-  track,
-}: PlayPauseProps) => {
+
+export const PlayPause = ({ track }: PlayPauseProps) => {
+  // Достаем контекст
+  const context = useContext(CurrentPlayingTrackContext);
+
+  // Проверка на всякий случай, чтобы TypeScript не ругался
+  if (!context) {
+    throw new Error(
+      'PlayPause должен использоваться внутри CurrentPlayingTrackContext.Provider'
+    );
+  }
+
+  // Деструктурируем данные из контекста
+  const { currentPlayingTrack, setCurrentPlayingTrack } = context;
+
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   useEffect(() => {
     if (currentPlayingTrack && currentPlayingTrack.id !== track.id) {
       setIsPlaying(false);
     }
-  }, [currentPlayingTrack]);
+  }, [currentPlayingTrack, track.id]);
 
   const onclick = () => {
     if (!currentPlayingTrack || currentPlayingTrack.id !== track.id) {

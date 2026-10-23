@@ -5,24 +5,13 @@ import './styles.css';
 
 interface TrackListProps {
   tracks: TrackModel[];
-  currentPlayingTrack: TrackModel | null;
-  setCurrentPlayingTrack: (currentPlayingTrackId: TrackModel) => void;
 }
 
-export const TrackList = ({
-  tracks,
-  currentPlayingTrack,
-  setCurrentPlayingTrack,
-}: TrackListProps) => {
+export const TrackList = ({ tracks }: TrackListProps) => {
   return (
     <div className='trackList'>
       {tracks.map((track) => (
-        <Track
-          key={track.id}
-          track={track}
-          currentPlayingTrack={currentPlayingTrack}
-          setCurrentPlayingTrack={setCurrentPlayingTrack}
-        />
+        <Track key={track.id} track={track} />
       ))}
     </div>
   );

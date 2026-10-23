@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { CurrentPlayingTrackContext } from './CurrentPlayingTrackContext';
 import { Layout } from './Layout';
 import { TrackModel } from './models/Track';
 import { TrackList } from './TrackList';
@@ -34,11 +35,11 @@ export const Context = () => {
         С помощью контекста мы можем поделиться нужными данными в одном из верхних
         компонентов и использовать их во вложенных.
       </h4>
-      <TrackList
-        tracks={tracks}
-        currentPlayingTrack={currentPlayingTrack}
-        setCurrentPlayingTrack={setCurrentPlayingTrack}
-      />
+      <CurrentPlayingTrackContext.Provider
+        value={{ currentPlayingTrack, setCurrentPlayingTrack }}
+      >
+        <TrackList tracks={tracks} />
+      </CurrentPlayingTrackContext.Provider>
     </Layout>
   );
 };
