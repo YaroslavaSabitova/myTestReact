@@ -10,13 +10,5 @@ export const ShareButton = ({ isAuth, needAuthText }: ShareButtonProps) => {
     alert('Вы успешно поделились картинкой');
   };
 
-  return (
-    <>
-      {isAuth ? (
-        <button onClick={onClick}>Поделиться</button>
-      ) : (
-        <div>{needAuthText}</div>
-      )}
-    </>
-  );
+  return <button onClick={onClick}>Поставить лайк</button>;
 };

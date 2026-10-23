@@ -2,8 +2,13 @@ import { useState } from 'react';
 
 import { LikeButton } from './LikeButton';
 import { ShareButton } from './ShareButton';
+import { withAuthButton } from './withAuth';
 
 import './styles.css';
+
+// Создаем обернутые компоненты
+const WithAuthShareButton = withAuthButton(ShareButton);
+const WithAuthLikeButton = withAuthButton(LikeButton);
 
 export const HOC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);
@@ -35,8 +40,9 @@ export const HOC = () => {
       <div className='card-container'>
         <div className='card'>Здесь должна быть умная мысль</div>
         <div className='like-share-container'>
-          <ShareButton isAuth={isAuth} needAuthText='Необходима авторизация' />
-          <LikeButton isAuth={isAuth} needAuthText='Необходима авторизация' />
+          {/* Используем новые компоненты */}
+          <WithAuthShareButton isAuth={isAuth} needAuthText='Необходима авторизация' />
+          <WithAuthLikeButton isAuth={isAuth} needAuthText='Необходима авторизация' />
         </div>
       </div>
     </div>

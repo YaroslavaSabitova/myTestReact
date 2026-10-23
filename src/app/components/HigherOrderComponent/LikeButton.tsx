@@ -10,13 +10,5 @@ export const LikeButton = ({ isAuth, needAuthText }: LikeButtonProps) => {
     alert('Вы успешно поставили лайк');
   };
 
-  return (
-    <>
-      {isAuth ? (
-        <button onClick={onClick}>Поставить лайк</button>
-      ) : (
-        <div>{needAuthText}</div>
-      )}
-    </>
-  );
+  return <button onClick={onClick}>Поставить лайк</button>;
 };
