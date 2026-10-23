@@ -6,6 +6,7 @@ import { BtnCaptureEvent } from './components/BtnCaptureEvent';
 import { CaptureEvent } from './components/CaptureEvent';
 import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
+import { Context } from './components/Context/Context';
 import { ControlledInput } from './components/controlledInput';
 import { ToggleText } from './components/customHook/ToggleText';
 import { ErrorBoundaryApp } from './components/ErrorBoundary/ErrorBoundary';
@@ -137,6 +138,8 @@ export const App = (): ReactElement => {
       <Portal />
 
       <HOC />
+
+      <Context />
     </>
   );
 };

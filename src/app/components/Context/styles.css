@@ -1,0 +1,75 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: auto;
+  min-height: 100%;
+  background: #fff;
+}
+
+.playPauseButton {
+  margin-right: 4px;
+}
+
+.trackRoot {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+}
+
+h4 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.typo {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.trackId {
+  min-width: 25px;
+  padding: 0 8px 0 0;
+  text-align: right;
+}
+
+.trackContent {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.trackTitle {
+  display: flex;
+  flex-grow: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackDurationContainer {
+  min-width: 45px;
+  text-align: right;
+}
+
+.trackDuration {
+  line-height: 28px;
+  vertical-align: middle;
+}
+
+.trackList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

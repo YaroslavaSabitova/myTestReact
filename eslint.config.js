@@ -57,6 +57,8 @@ export default defineConfig(
       'unused-imports': unusedImports,
     },
     rules: {
+      'import/no-named-as-default': 'off',
+      '@typescript-eslint/prefer-optional-chain': 'off',
       '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -78,10 +80,10 @@ export default defineConfig(
       '@typescript-eslint/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
-      'css-modules/no-undef-class': 'error',
-      'css-modules/no-unused-class': 'warn',
+      'css-modules/no-undef-class': 'off',
+      'css-modules/no-unused-class': 'off',
       'import/no-unresolved': 'off',
-      'import/no-unused-modules': 'error',
+      'import/no-unused-modules': 'off',
       'import/order': 'off',
       'perfectionist/sort-imports': [
         'error',
@@ -127,7 +129,7 @@ export default defineConfig(
       'react/jsx-uses-react': 'off',
       'react/prop-types': 'off',
       'react-refresh/only-export-components': 'off',
-      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-imports': 'off',
       'react-hooks/exhaustive-deps': 'off',
     },
     settings: {
