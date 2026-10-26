@@ -8,6 +8,7 @@ import { Card, CardTitle, CardBody } from './components/Card';
 import { Checkbox } from './components/checkbox';
 import { Context } from './components/Context/Context';
 import { ControlledInput } from './components/controlledInput';
+import { Counter } from './components/Counter';
 import { ToggleText } from './components/customHook/ToggleText';
 import { ErrorBoundaryApp } from './components/ErrorBoundary/ErrorBoundary';
 import { FocusBlur } from './components/focusBlur';
@@ -143,6 +144,8 @@ export const App = (): ReactElement => {
       <Context />
 
       <ToDoList />
+
+      <Counter />
     </>
   );
 };
