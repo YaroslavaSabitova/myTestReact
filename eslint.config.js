@@ -57,6 +57,7 @@ export default defineConfig(
       'unused-imports': unusedImports,
     },
     rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
       'import/no-named-as-default': 'off',
       '@typescript-eslint/prefer-optional-chain': 'off',
       '@typescript-eslint/no-floating-promises': 'off',

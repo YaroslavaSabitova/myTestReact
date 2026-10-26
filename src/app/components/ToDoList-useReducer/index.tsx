@@ -1,9 +1,11 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+import { useReducer } from 'react';
 
 import { getRandomInt } from './getRandomInt';
 import { TodoInput } from './ToDoInput';
 import { TodoList } from './TodoList';
 import { TodoModel } from './TodoModel';
+import { todoReducer } from './TodoReducer';
 
 import './styles.css';
 
@@ -23,7 +25,9 @@ const initialTodos: TodoModel[] = [
 ];
 
 export const ToDoList = () => {
-  const [todos, setTodos] = useState<TodoModel[]>(initialTodos);
+  // const [todos, setTodos] = useState<TodoModel[]>(initialTodos);
+  const [todos, dispatch] = useReducer(todoReducer, initialTodos);
+
   return (
     <div className='container'>
       <h3>
@@ -34,8 +38,12 @@ export const ToDoList = () => {
         а&#160;как&#160;это&#160;сделать&#160;&#8212; решает редьюсер
       </h3>
       <div className='inner'>
-        <TodoInput todos={todos} setTodos={setTodos} />
-        <TodoList todos={todos} setTodos={setTodos} />
+        {/* <TodoInput todos={todos} setTodos={setTodos} />
+        <TodoList todos={todos} setTodos={setTodos} /> */}
+
+        {/* Передаем dispatch вместо setTodos */}
+        <TodoInput dispatch={dispatch} />
+        <TodoList todos={todos} dispatch={dispatch} />
       </div>
     </div>
   );
