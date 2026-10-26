@@ -29,6 +29,7 @@ import { Subscribe } from './components/Subscribe';
 import { SynthEvent } from './components/syntheticEvent';
 import { TemperatureConverter } from './components/TemperatureConverter';
 import { TemperatureConverter2 } from './components/TemperatureConverter-2';
+import { ToDoList } from './components/ToDoList-useReducer';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
 import { TextInput } from './components/useRef-autofocus';
@@ -140,6 +141,8 @@ export const App = (): ReactElement => {
       <HOC />
 
       <Context />
+
+      <ToDoList />
     </>
   );
 };
