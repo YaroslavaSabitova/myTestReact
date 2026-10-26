@@ -1,3 +1,7 @@
+// В React данные передаются сверху вниз через props. Если у тебя есть дерево из 10 компонентов, и данные нужны самому нижнему, тебе придется прокидовать их через все 9 компонентов сверху. Это называется Prop Drilling (бурение скважины пропсами) и  засоряет код.
+
+// Context позволяет создать «глобальное хранилище» для конкретной ветки компонентов. Ты кладешь данные в это хранилище наверху, и любой компонент внутри этой ветки может достать их напрямую, не передавая через props.
+
 import { useState } from 'react';
 
 import { CurrentPlayingTrackContext } from './CurrentPlayingTrackContext';
@@ -24,6 +28,7 @@ const tracks: TrackModel[] = [
 ];
 
 export const Context = () => {
+  // currentPlayingTrack = null (какой трек сейчас играет)
   const [currentPlayingTrack, setCurrentPlayingTrack] = useState<TrackModel | null>(
     null
   );
@@ -35,6 +40,7 @@ export const Context = () => {
         С помощью контекста мы можем поделиться нужными данными в одном из верхних
         компонентов и использовать их во вложенных.
       </h4>
+      {/* любой компонент внутри TrackList имеет доступ к value */}
       <CurrentPlayingTrackContext.Provider
         value={{ currentPlayingTrack, setCurrentPlayingTrack }}
       >
