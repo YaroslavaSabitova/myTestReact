@@ -30,6 +30,7 @@ import { Subscribe } from './components/Subscribe';
 import { SynthEvent } from './components/syntheticEvent';
 import { TemperatureConverter } from './components/TemperatureConverter';
 import { TemperatureConverter2 } from './components/TemperatureConverter-2';
+import { TodoListRedux } from './components/ToDoList-Redux';
 import { ToDoList } from './components/ToDoList-useReducer';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
@@ -146,6 +147,8 @@ export const App = (): ReactElement => {
       <ToDoList />
 
       <Counter />
+
+      <TodoListRedux />
     </>
   );
 };

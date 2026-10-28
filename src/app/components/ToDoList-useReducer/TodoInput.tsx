@@ -1,8 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 
-import { getRandomInt } from './getRandomInt';
+// import { getRandomInt } from './getRandomInt';
 // import { TodoModel } from './TodoModel';
-
 import './styles.css';
 
 interface TodoInputProps {

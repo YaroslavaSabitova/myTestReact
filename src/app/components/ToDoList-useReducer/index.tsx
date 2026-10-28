@@ -2,7 +2,7 @@
 import { useReducer } from 'react';
 
 import { getRandomInt } from './getRandomInt';
-import { TodoInput } from './ToDoInput';
+import { TodoInput } from './TodoInput';
 import { TodoList } from './TodoList';
 import { TodoModel } from './TodoModel';
 import { todoReducer } from './TodoReducer';
@@ -30,6 +30,7 @@ export const ToDoList = () => {
 
   return (
     <div className='container'>
+      <h3> Список задач (To-Do) на useReducer</h3>
       <h3>
         useReducer позволяет вынести всю&#160;логику работы с&#160;состоянием
         в&#160;отдельную функцию (редьюсер). Компоненты становятся &#171;глупыми&#187;:
