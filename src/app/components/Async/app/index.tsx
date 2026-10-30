@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { RootState } from '../../../commonStore';
+import { RootState, AppDispatch } from '../../../commonStore';
+// import { AppDispatch } from '../store/store';
 import { Layout } from '../components/Layout';
 import { TrackList } from '../components/TrackList';
 import { fetchTracks } from '../slices/tracksSlice';
-import { AppDispatch } from '../store/store';
 
 export const Async = () => {
   const dispatch = useDispatch<AppDispatch>();

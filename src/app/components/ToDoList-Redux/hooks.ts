@@ -2,7 +2,8 @@
 
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
-import { RootState, AppDispatch } from './todoStore';
+// import { RootState, AppDispatch } from './todoStore';
+import { RootState, AppDispatch } from '../../commonStore';
 
 // хуки вместо обычных useDispatch и useSelector
 export const useAppDispatch = () => useDispatch<AppDispatch>();
