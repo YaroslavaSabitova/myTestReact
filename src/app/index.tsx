@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { Async } from './components/Async/app';
 import { Book, books, BookProps } from './components/Books';
 import { List, listTextbooks } from './components/Books-2';
 import { BtnCaptureEvent } from './components/BtnCaptureEvent';
@@ -149,6 +150,8 @@ export const App = (): ReactElement => {
       <Counter />
 
       <TodoListRedux />
+
+      <Async />
     </>
   );
 };

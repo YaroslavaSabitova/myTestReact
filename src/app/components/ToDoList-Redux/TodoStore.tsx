@@ -12,5 +12,8 @@ export const store = configureStore({
 });
 
 // Типы для TypeScript (чтобы хуки знали, какие данные лежат в Store)
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+//  общие типы  для useSelector и useDispatch
+
+// RootState и AppDispatch в commonStore
+// export type RootState = ReturnType<typeof store.getState>;
+// export type AppDispatch = typeof store.dispatch;
