@@ -6,8 +6,10 @@ import { TrackModel } from '../models/Track';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 // Создаем асинхронный экшен
+// tracks / fetchTracks - уникальное имя (строка)
 export const fetchTracks = createAsyncThunk('tracks/fetchTracks', async () => {
   const response = await getTracks();
+  // response попадет в action.payload, если запрос fulfilled
   return response;
 });
 
@@ -36,13 +38,16 @@ const tracksSlice = createSlice({
   // Обработка асинхронного экшена
   extraReducers: (builder) => {
     builder
+      // запрос ждём
       .addCase(fetchTracks.pending, (state) => {
         state.isLoading = true;
       })
+      // запрос успешен
       .addCase(fetchTracks.fulfilled, (state, action) => {
         state.isLoading = false;
         state.tracks = action.payload; // Сохраняем данные
       })
+      // запрос неуспешен
       .addCase(fetchTracks.rejected, (state) => {
         state.isLoading = false;
       });
