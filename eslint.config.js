@@ -57,6 +57,7 @@ export default defineConfig(
       'unused-imports': unusedImports,
     },
     rules: {
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
       'react/jsx-key': 'off',
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',

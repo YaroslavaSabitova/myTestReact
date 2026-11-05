@@ -22,6 +22,7 @@ import { InputFile } from './components/inputFile';
 import { KeyboardEvent } from './components/KeyboardEvent';
 import { Links } from './components/Links/app';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
+import { ModalRoutes } from './components/ModalRoutes/app';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
 import { Portal } from './components/Portal/Portal';
@@ -158,6 +159,8 @@ export const App = (): ReactElement => {
       <Links />
 
       <TabsScroll />
+
+      <ModalRoutes />
     </>
   );
 };
