@@ -30,6 +30,7 @@ import Recipe from './components/Recipe';
 import { Select } from './components/select';
 import { Subscribe } from './components/Subscribe';
 import { SynthEvent } from './components/syntheticEvent';
+import { TabsScroll } from './components/TabsScroll/app';
 import { TemperatureConverter } from './components/TemperatureConverter';
 import { TemperatureConverter2 } from './components/TemperatureConverter-2';
 import { TodoListRedux } from './components/ToDoList-Redux';
@@ -155,6 +156,8 @@ export const App = (): ReactElement => {
       <Async />
 
       <Links />
+
+      <TabsScroll />
     </>
   );
 };
