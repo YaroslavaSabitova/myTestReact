@@ -57,6 +57,7 @@ export default defineConfig(
       'unused-imports': unusedImports,
     },
     rules: {
+      'react/jsx-key': 'off',
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       'import/no-named-as-default': 'off',

@@ -20,6 +20,7 @@ import { FunctionalBtn } from './components/FunctionalBtn';
 import { HOC } from './components/HigherOrderComponent/HOC';
 import { InputFile } from './components/inputFile';
 import { KeyboardEvent } from './components/KeyboardEvent';
+import { Links } from './components/Links/app';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
@@ -152,6 +153,8 @@ export const App = (): ReactElement => {
       <TodoListRedux />
 
       <Async />
+
+      <Links />
     </>
   );
 };
