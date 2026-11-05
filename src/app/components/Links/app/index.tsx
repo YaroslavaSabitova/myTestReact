@@ -6,10 +6,11 @@
 
 // Route - "Правило": если у URL такой-то (path), покажи вот этот element
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { Auth } from '../Auth';
 import { Home } from '../pages/Home';
+import { Hotel } from '../pages/Hotel';
 import { HotelList } from '../pages/HotelList';
 import { SignIn } from '../pages/SignIn';
 
@@ -19,9 +20,11 @@ export const Links = () => {
       <h3>Маршрутизация в SPA (Single Page Application)</h3>
       <Routes>
         <Route path='/' element={<Home />} />
+        {/* <Route path='/' element={<Navigate to='/hotel-list' />} /> */}
         <Route path='/hotel-list' element={<HotelList />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/auth' element={<Auth />} />
+        <Route path='/hotel/:hotelIndex' element={<Hotel />} />
       </Routes>
     </div>
   );
