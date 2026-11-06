@@ -21,6 +21,7 @@ import { HOC } from './components/HigherOrderComponent/HOC';
 import { InputFile } from './components/inputFile';
 import { KeyboardEvent } from './components/KeyboardEvent';
 import { Links } from './components/Links/app';
+import { LogIn } from './components/LogIn';
 import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { ModalRoutes } from './components/ModalRoutes/app';
 import { Title } from './components/MouseEnter';
@@ -161,6 +162,8 @@ export const App = (): ReactElement => {
       <TabsScroll />
 
       <ModalRoutes />
+
+      <LogIn />
     </>
   );
 };
