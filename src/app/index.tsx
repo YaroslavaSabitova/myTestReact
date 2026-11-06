@@ -29,6 +29,7 @@ import { OnlyDigits } from './components/onlyDigits';
 import { Portal } from './components/Portal/Portal';
 import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
+import { SavePassword } from './components/SavePassword/app';
 import { Select } from './components/select';
 import { Subscribe } from './components/Subscribe';
 import { SynthEvent } from './components/syntheticEvent';
@@ -164,6 +165,8 @@ export const App = (): ReactElement => {
       <ModalRoutes />
 
       <LogIn />
+
+      <SavePassword />
     </>
   );
 };

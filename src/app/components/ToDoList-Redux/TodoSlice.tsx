@@ -38,5 +38,5 @@ const todoSlice = createSlice({
 // экшены - инструкцию по эксплуатации редьюсера
 export const { addTodo, deleteTodo } = todoSlice.actions;
 
-// для TodoStore;
+// для common store;
 export const todoReducer = todoSlice.reducer;

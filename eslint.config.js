@@ -57,6 +57,9 @@ export default defineConfig(
       'unused-imports': unusedImports,
     },
     rules: {
+      '@typescript-eslint/no-empty-function': 'off',
+      'no-empty-pattern': 'off',
+      '@typescript-eslint/prefer-promise-reject-errors': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': 'off',
       'react/jsx-key': 'off',
       '@typescript-eslint/no-inferrable-types': 'off',
