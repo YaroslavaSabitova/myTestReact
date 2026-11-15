@@ -40,6 +40,7 @@ import { TodoListRedux } from './components/ToDoList-Redux';
 import { ToDoList } from './components/ToDoList-useReducer';
 import { UncontrolledInput } from './components/uncontrolledInput';
 import { Time } from './components/useEffect-onlineTime';
+import { Memo } from './components/useMemo';
 import { TextInput } from './components/useRef-autofocus';
 import { ChangeColorRef } from './components/useRef-changeColor';
 import { BtnCounter } from './components/useState-counter';
@@ -167,6 +168,8 @@ export const App = (): ReactElement => {
       <LogIn />
 
       <SavePassword />
+
+      <Memo />
     </>
   );
 };

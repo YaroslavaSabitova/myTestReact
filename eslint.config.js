@@ -57,6 +57,7 @@ export default defineConfig(
       'unused-imports': unusedImports,
     },
     rules: {
+      '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/no-empty-function': 'off',
       'no-empty-pattern': 'off',
       '@typescript-eslint/prefer-promise-reject-errors': 'off',
