@@ -16,6 +16,10 @@ import tseslint from 'typescript-eslint';
 export default defineConfig(
   {
     ignores: [
+      'dist/**',
+      'coverage/**',
+      'tests/**',
+      'playwright.config.ts',
       '*.config.*',
       '**/*.d.ts',
       'dist',
