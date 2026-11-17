@@ -13,7 +13,7 @@
     "stylelint": "stylelint \"src/**/*.css\" --fix",
     "lint": "npm run stylelint && npm run eslint && npm run prettier",
     "prepare": "husky",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.13.0",
