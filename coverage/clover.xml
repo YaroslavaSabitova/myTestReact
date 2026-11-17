@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1794939621127" clover="3.2.0">
-  <project timestamp="1794939621127" name="All files">
+<coverage generated="1794940912072" clover="3.2.0">
+  <project timestamp="1794940912072" name="All files">
     <metrics statements="94" coveredstatements="84" conditionals="27" coveredconditionals="26" methods="13" coveredmethods="11" elements="134" coveredelements="121" complexity="0" loc="94" ncloc="94" packages="1" files="8" classes="8"/>
     <file name="divide.ts" path="C:\Users\yasik\Desktop\ПРАКТИКУМ\PROJECTS\REACT\src\app\components\Testing\divide.ts">
       <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
