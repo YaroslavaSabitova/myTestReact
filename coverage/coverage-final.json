@@ -457,6 +457,35 @@
     },
     "f": { "0": 1 }
   },
+  "C:\\Users\\yasik\\Desktop\\ПРАКТИКУМ\\PROJECTS\\REACT\\src\\app\\components\\Testing\\showPromotionBanner.ts": {
+    "path": "C:\\Users\\yasik\\Desktop\\ПРАКТИКУМ\\PROJECTS\\REACT\\src\\app\\components\\Testing\\showPromotionBanner.ts",
+    "all": false,
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 0 }, "end": { "line": 1, "column": 89 } },
+      "1": { "start": { "line": 2, "column": 0 }, "end": { "line": 2, "column": 0 } },
+      "2": { "start": { "line": 3, "column": 0 }, "end": { "line": 3, "column": 57 } },
+      "3": { "start": { "line": 4, "column": 0 }, "end": { "line": 4, "column": 39 } },
+      "4": { "start": { "line": 5, "column": 0 }, "end": { "line": 5, "column": 1 } }
+    },
+    "s": { "0": 1, "1": 1, "2": 0, "3": 0, "4": 0 },
+    "branchMap": {},
+    "b": {},
+    "fnMap": {
+      "0": {
+        "name": "showPromotionBanner",
+        "decl": {
+          "start": { "line": 3, "column": 0 },
+          "end": { "line": 5, "column": 1 }
+        },
+        "loc": {
+          "start": { "line": 3, "column": 0 },
+          "end": { "line": 5, "column": 1 }
+        },
+        "line": 3
+      }
+    },
+    "f": { "0": 0 }
+  },
   "C:\\Users\\yasik\\Desktop\\ПРАКТИКУМ\\PROJECTS\\REACT\\src\\app\\components\\Testing\\storage.ts": {
     "path": "C:\\Users\\yasik\\Desktop\\ПРАКТИКУМ\\PROJECTS\\REACT\\src\\app\\components\\Testing\\storage.ts",
     "all": false,

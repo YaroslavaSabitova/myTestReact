@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1794938601031" clover="3.2.0">
-  <project timestamp="1794938601031" name="All files">
-    <metrics statements="89" coveredstatements="82" conditionals="27" coveredconditionals="26" methods="12" coveredmethods="11" elements="128" coveredelements="119" complexity="0" loc="89" ncloc="89" packages="1" files="7" classes="7"/>
+<coverage generated="1794939621127" clover="3.2.0">
+  <project timestamp="1794939621127" name="All files">
+    <metrics statements="94" coveredstatements="84" conditionals="27" coveredconditionals="26" methods="13" coveredmethods="11" elements="134" coveredelements="121" complexity="0" loc="94" ncloc="94" packages="1" files="8" classes="8"/>
     <file name="divide.ts" path="C:\Users\yasik\Desktop\ПРАКТИКУМ\PROJECTS\REACT\src\app\components\Testing\divide.ts">
       <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <line num="1" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -67,6 +67,14 @@
       <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
+    </file>
+    <file name="showPromotionBanner.ts" path="C:\Users\yasik\Desktop\ПРАКТИКУМ\PROJECTS\REACT\src\app\components\Testing\showPromotionBanner.ts">
+      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
     </file>
     <file name="storage.ts" path="C:\Users\yasik\Desktop\ПРАКТИКУМ\PROJECTS\REACT\src\app\components\Testing\storage.ts">
       <metrics statements="35" coveredstatements="33" conditionals="7" coveredconditionals="6" methods="6" coveredmethods="6"/>
