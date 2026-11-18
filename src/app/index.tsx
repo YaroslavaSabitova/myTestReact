@@ -26,6 +26,7 @@ import { BtnModalOpen } from './components/modal/btnOpenModal';
 import { ModalRoutes } from './components/ModalRoutes/app';
 import { Title } from './components/MouseEnter';
 import { OnlyDigits } from './components/onlyDigits';
+import Playwright from './components/Playwright';
 import { Portal } from './components/Portal/Portal';
 import { Radio } from './components/radio';
 import Recipe from './components/Recipe';
@@ -170,6 +171,8 @@ export const App = (): ReactElement => {
       <SavePassword />
 
       <Memo />
+
+      <Playwright />
     </>
   );
 };
